@@ -1,25 +1,27 @@
 # eClaw Server
 
-> 🌐 eClaw 网页服务端 — Node.js + Express + WebSocket，提供用户认证、文件上传、与 xCrab Gateway 集成的网页平台
+> 🌐 eClaw Web Server — Node.js + Express + WebSocket, providing user authentication, file upload, and integration with xCrab Gateway
 
 [![GPL-3.0 License](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](LICENSE)
 [![Node.js v18+](https://img.shields.io/badge/Node.js-v18+-green.svg)](https://nodejs.org/)
+[![Stars](https://img.shields.io/github/stars/yzp100911/eclaw-server?style=social)](https://github.com/yzp100911/eclaw-server)
+[![Forks](https://img.shields.io/github/forks/yzp100911/eclaw-server?style=social)](https://github.com/yzp100911/eclaw-server)
 
-## 功能特性
+## Features
 
-- **用户认证系统** — JWT 令牌认证，支持注册、登录
-- **文件上传** — 支持文件上传和管理
-- **WebSocket 实时通信** — 与客户端保持长连接
-- **xCrab Gateway 集成** — 无缝对接 xCrab Agent 多模型网关
-- **MySQL 数据存储** — 持久化用户数据和配置
+- **User Authentication System** — JWT token authentication, supporting registration and login
+- **File Upload** — Support for file upload and management
+- **WebSocket Real-time Communication** — Maintains long connection with clients
+- **xCrab Gateway Integration** — Seamlessly integrates with xCrab Agent multi-model gateway
+- **MySQL Data Storage** — Persistent user data and configuration
 
-## 环境要求
+## Requirements
 
 - Node.js v18+
 - MySQL 5.7+
-- npm 或 pnpm
+- npm or pnpm
 
-## 安装
+## Installation
 
 ```bash
 git clone https://github.com/yzp100911/eclaw-server.git
@@ -27,49 +29,55 @@ cd eclaw-server
 npm install
 ```
 
-## 配置
+## Configuration
 
-创建 `.env` 文件：
+Create a `.env` file:
 
 ```env
 PORT=3001
 JWT_SECRET=your-super-secret-key
 
-# MySQL 配置（通过 SSH 隧道连接）
+# MySQL Configuration (connected via SSH tunnel)
 MYSQL_HOST=127.0.0.1
 MYSQL_PORT=3306
 MYSQL_USER=your_user
 MYSQL_PASSWORD=your_password
 MYSQL_DATABASE=wclaw_db
 
-# xCrab Gateway 配置
+# xCrab Gateway Configuration
 XCRAB_API_URL=http://localhost:3000
 XCRAB_TOKEN=your_token
 
-# SSH 隧道（连接云数据库）
+# SSH Tunnel (for cloud database connection)
 SSH_HOST=your_server
 SSH_PORT=22
 SSH_USER=ubuntu
 SSH_KEY_PATH=~/.ssh/id_rsa
 ```
 
-## 运行
+## Running
 
 ```bash
 npm start
 ```
 
-## 项目结构
+## Project Structure
 
 ```
 eclaw-server/
-├── server.js          # 主入口
-├── wclaw/             # 网页前端静态文件
-├── cloud-sync.js      # 云端同步模块
+├── server.js          # Main entry point
+├── wclaw/             # Web frontend static files
+├── cloud-sync.js      # Cloud sync module
 ├── package.json
 └── LICENSE
 ```
 
-## 开源协议
+## Related Projects
 
-本项目采用 [GPL-3.0](LICENSE) 开源协议。
+- [xCrab-Agent](https://github.com/yzp100911/xCrab-Agent) — Multi-model AI Gateway
+- [eClaw Server](https://github.com/yzp100911/eclaw-server) — Web Server
+- [Claw Client](https://github.com/yzp100911/claw-client) — Execution Client
+
+## License
+
+This project is licensed under [GPL-3.0](LICENSE).
