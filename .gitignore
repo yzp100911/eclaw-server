@@ -1,0 +1,13 @@
+node_modules/
+.env
+*.log
+*.bak
+*.db
+.DS_Store
+.idea/
+.vscode/
+uploads/
+hermes-android.apk
+history.json
+users.json
+package-lock.json
